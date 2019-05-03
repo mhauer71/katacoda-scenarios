@@ -1,0 +1,31 @@
+{
+    "noindex": true,
+    "title": "Interactive Quiz",
+    "description": "Verify understand and key points by using an interactive quiz",
+    "details": {
+        "steps": [
+            {
+                "title": "Passo 1",
+                "text": "step1.md"
+            }
+            {
+                "title": "Passo 2",
+                "text": "step2.md"
+            }
+        ],
+        "intro": {
+            "text": "intro.md",
+            "credits": "Marcos Paulo Hauer - 2019 - Vertigo Tecnologia"
+        },
+        "finish": {
+            "text": "finish.md"
+        }
+    },
+    "files": [],
+    "environment": {
+        "uilayout": "terminal"
+    },
+    "backend": {
+        "imageid": "kubernetes"
+    }
+}
