@@ -1,7 +1,7 @@
 {
     "noindex": true,
-    "title": "Kubernetes - Pratica e questões",
-    "description": "Verificar o entendimento sobre conceitos básicos de Kubernetes e testar o conhecimento adquirido em um abiente real",
+    "title": "Kubernetes - Prática e questões",
+    "description": "Mostrar conceitos básicos de Kubernetes e testar o conhecimento adquirido em um abiente real",
     "details": {
         "steps": [
             {
