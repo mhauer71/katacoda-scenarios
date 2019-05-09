@@ -1,7 +1,7 @@
 {
     "noindex": true,
-    "title": "Interactive Quiz",
-    "description": "Verify understand and key points by using an interactive quiz",
+    "title": "Kubernetes - Pratica e questões",
+    "description": "Verificar o entendimento sobre conceitos básicos de Kubernetes e testar o conhecimento adquirido em um abiente real",
     "details": {
         "steps": [
             {
