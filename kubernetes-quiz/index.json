@@ -5,8 +5,9 @@
     "details": {
         "steps": [
             {
-                "title": "Passo 1",
-                "text": "step1.md"
+                "title": "Passo 1 - Verificando a versão do Kubernetes",
+                "text": "step1.md",
+                "courseData": "launch.sh"
             },
             {
                 "title": "Passo 2",
