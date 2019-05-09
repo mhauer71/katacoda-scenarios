@@ -1,5 +1,29 @@
-## Example Quiz
+## Verificando a versão do Kubernetes
 
+Através do comando kubectl você pode ter controle do cluster Kubernetes e obter informações sobre o mesmo. 
+Experimente: clique no comando abaixo.
+
+`kubectl get nodes`{{execute}}
+
+>> Com base no comando anterior, quantos nodes o cluster possui? <<
+( ) 0
+(*) 1
+( ) 2
+( ) 3
+( ) 4
+
+Agora, vamos ver a versão do Kubernetes rodando no cluster
+
+`kubectl version`{{execute}}
+
+>> Qual a versão do Kubernetes? <<
+( ) 0
+(*) 1
+( ) 2
+( ) 3
+( ) 4
+
+----------------------------------------------------------------------------------
 Within Q1, requires are users to enter the exact string.
 
 >>Q1: Enter the exact string test<<
@@ -19,9 +43,7 @@ Q3 is multiple choice question, requiring users to select all the correct answer
 
 Q4 is a single choice where users must select the correct answer.
 
->>Q4: Single Choice <<
-(*) Correct
-( ) Incorrect
+
 
 ## Markdown
 
