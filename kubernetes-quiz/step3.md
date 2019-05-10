@@ -12,5 +12,5 @@ Sugerimos alguns comandos para você experimentar:
 
 `kubectl explain node`{{execute}}
 
-Não esqueça de enviar um print desta dela para o e-mail xxxxxx@vertigo.com.br com seus comentários a respeito do quiz.
+Não esqueça de enviar um print desta tela para o e-mail xxxxxx@vertigo.com.br com seus comentários a respeito do quiz.
 
