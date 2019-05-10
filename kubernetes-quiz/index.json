@@ -7,7 +7,7 @@
             {
                 "title": "Passo 1 - Verificando a versão do Kubernetes",
                 "text": "step1.md",
-                "code": "step1-background.sh"
+                "code": "step1-foreground.sh"
             },
             {
                 "title": "Passo 2",
