@@ -13,7 +13,10 @@
                 "title": "Passo 2",
                 "text": "step2.md",
                 "courseData": "step2-background.sh"
-            }
+            },
+            {
+                "title": "Final",
+                "text": "step3.md"}
         ],
         "intro": {
             "text": "intro.md",
