@@ -6,8 +6,7 @@
         "steps": [
             {
                 "title": "Passo 1 - Verificando a versão do Kubernetes",
-                "text": "step1.md",
-                "code": "launch.sh"
+                "text": "step1.md"
             },
             {
                 "title": "Passo 2",
