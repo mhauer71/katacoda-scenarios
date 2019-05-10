@@ -9,4 +9,4 @@ Agora vamos verificar qual a imagem que foi instalada no nosso webserver: digite
 Substituindo <NOME-DO-POD> pelo resultado obtido no comando anterior. Depois disso procure na saída do comando pelo campo "Image:"
 
 >>Qual é a imagem utilizada pelo nosso webserver?<<
-=== test
+=== ngnix
