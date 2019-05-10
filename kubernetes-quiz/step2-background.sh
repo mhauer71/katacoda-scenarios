@@ -1,2 +1,2 @@
 #!/bin/bash
-kubectl run ngnix --image=nginx
+kubectl run webserver --image=nginx
