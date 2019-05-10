@@ -1,7 +1,7 @@
 ## Verificando a versão do Kubernetes
 
 Através do comando kubectl você pode ter controle do cluster Kubernetes e obter informações sobre o mesmo. 
-Experimente: clique no comando abaixo.
+Experimente: no terminal ao lado estamos rodando o comando `launch.sh` para inicializar o cluster. Quando o comando terminar, clique na caixa abaixo.
 
 `kubectl get nodes`{{execute}}
 
