@@ -1,0 +1,35 @@
+{
+    "noindex": true,
+    "title": "Linha de comando com gcloud, kubectl e shell",
+    "description": "Mostrar conceitos básicos de Kubernetes e testar o conhecimento adquirido em um abiente real",
+    "details": {
+        "steps": [
+            {
+                "title": "Passo 1 - Instalando dependências e autenticando na gcloud",
+                "text": "step1.md",
+                "code": "step1-foreground.sh"
+            },
+            {
+                "title": "Passo 2 - Recuperação de credenciais do(s) cluster(s)",
+                "text": "step2.md"
+            },
+            {
+                "title": "Final",
+                "text": "step3.md"}
+        ],
+        "intro": {
+            "text": "intro.md",
+            "credits": "Marcos Paulo Hauer - 2020 - Hurb"
+        },
+        "finish": {
+            "text": "finish.md"
+        }
+    },
+    "files": [],
+    "environment": {
+        "uilayout": "terminal"
+    },
+    "backend": {
+        "imageid": "ubuntu"
+    }
+}
