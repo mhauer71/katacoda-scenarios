@@ -18,7 +18,7 @@ e a conexão com o cluster usando
 
 `kubectl cluster-info`{{execute}}
 
-* Caso você queira trabalhar com mais de um cluster, recuperando a credencial de cada um deles através do comando *get-credentials* acima, um app bem útil é o *kubectx*, que agiliza a identificação e mudança de contexto do kubectl. Com ele fica mais fácila alternar entre clusters e usuários configurados no KUBECONFIG. Ele pode ser instalado com os comandos abaixo:
+* Caso você queira trabalhar com mais de um cluster, recuperando a credencial de cada um deles através do comando *get-credentials* acima, um app bem útil é o *kubectx*, que agiliza a identificação e mudança de contexto do kubectl. Com ele fica mais fácil alternar entre clusters e usuários configurados no KUBECONFIG. Ele pode ser instalado com os comandos abaixo:
 
 `git clone https://github.com/ahmetb/kubectx.git ~/.kubectx; export PATH=~/.kubectx:$PATH`{{execute}}
 
