@@ -1,4 +1,4 @@
-## Recuperação de credenciais do(s) cluster(s)
+
 Clique na linha abaixo para listar os projetos da sua conta na Google Cloud
 `gcloud projects list`{{execute}}
 
@@ -28,6 +28,6 @@ Para visualizar os contextos existentes e qual o selecionado atualmente use:
 
 e para alternar para outro contexto digite *kubectx NOME_DO_CONTEXTO* e para retornar ao contexto anterior, *kubectx -*.
 
-Junto com o kubectx é instalado também o *kubens* que funciona de forma similar ao kubectx.
+Junto com o kubectx é instalado também o *kubens* que funciona de forma similar ao kubectx para namespaces.
 
 Visite a página https://github.com/ahmetb/kubectx para mais detalhes sobre o kubectx e o kubens.

@@ -14,7 +14,7 @@
                 "text": "step2.md"
             },
             {
-                "title": "Final",
+                "title": "Passo 3 - Verificando os ingress do cluster e sua ligação com os objetos da Google Cloud",
                 "text": "step3.md"}
         ],
         "intro": {

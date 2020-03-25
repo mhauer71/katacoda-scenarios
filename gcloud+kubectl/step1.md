@@ -1,4 +1,4 @@
-## Instalando dependências e autenticando na gcloud
+
 
 Aguarde enqunto o google-cloud-sdk é instalado
 
