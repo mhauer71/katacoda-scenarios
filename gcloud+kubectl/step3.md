@@ -30,14 +30,11 @@ ingress_count=$(echo $json | jq '.items|length')
 for ((i=0;i<$ingress_count;i++)); do
     unset rule_array
     name=$(echo $json | jq -r '.items['$i'].metadata.name')
-    ### TODO: Otimizar uso do jq, capturando as variáveis apenas com uma execução do comando
     ip=$(echo $json | jq -r '.items['$i'].status.loadBalancer.ingress[].ip')
     backend=$(echo $json | jq -r '.items['$i'].metadata.annotations["ingress.kubernetes.io/backends"]' | cut -f2 -d\")
     host_and_path=$(gcloud compute health-checks list --format="csv[no-heading](httpHealthCheck.host,httpHealthCheck.requestPath)" --filter="name=('$backend')")
-    ### TODO: Trocar uso do "cut" para "read", para capturar as variáveis com apenas com um comando
     lb_host=$(echo $host_and_path | cut -d, -f1)
     healthcheck_path=$(echo $host_and_path | cut -d, -f2)    
-    ### Caso o host esteja discriminado dentro do healthcheck, usamos o seu valor para todas os "Host:" headers. Caso contrário, usamos o valor das Forward Rules
     echo "----"
     echo "Ingress: "$name
     echo "IP: "$ip
