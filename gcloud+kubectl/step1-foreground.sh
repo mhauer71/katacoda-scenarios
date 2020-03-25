@@ -1,8 +1,5 @@
 #!/bin/bash
 
-install_kubectx () {
-    
-}
 # Script para instalar dependências
 #  gcloud cli, jq, pkg-config
 export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
