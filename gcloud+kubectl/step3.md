@@ -23,7 +23,7 @@ Temos agora mais informações do que tínhamos obtido no primeiro comando e, pa
 ```
 Na GKE esses annotations correspondem a toda a cadeia de objetos da GCP responsável pelo balanceamento de carga de acessos para dentro de um serviço do cluster GKE. Cada um recebe um prefixo de acordo com a sua funcionalidade (k8s-be para backends, k8s-fw/k8s-fws para forward-rules http/https, k8s-um para URL Maps e assim por diante), o nome do ingress e um sufixo IDENTIFICADOR do cluster, todos os objetos da cadeia de um cluster terão o mesmo IDENTIFICADOR. 
 
-O benefício dessa integração das annotations do ingress com os objetos da GCP é que com apenas um comando `kubectl get ingress  -o json`{{execute}} podemos obter quase todos os atributos da cadeia do Healthcheck do baleanceador de carga do ingress, restando apenas o caminho do Healthcheck que pode ser obtido com apenas um comando gcloud conforme demonstrado no script abaixo:
+O benefício dessa integração das annotations do ingress com os objetos da GCP é que com apenas um comando `kubectl get ingress  -o json`{{execute}} podemos obter quase todos os atributos da cadeia do Healthcheck do baleanceador de carga do ingress, restando apenas o caminho do Healthcheck que pode ser obtido com apenas um comando gcloud conforme demonstrado no script abaixo (clique no script para executá-lo no terminal):
 
 `json=$(kubectl get ingress  -o json)
 ingress_count=$(echo $json | jq '.items|length')
@@ -56,4 +56,3 @@ for ((i=0;i<$ingress_count;i++)); do
 done`{{execute}}
 
 Usando esse métdodo, com apenas um acesso ao cluster (o comandos *kubectl get ingress*) e um à API da GCP para cada ingress (*gcloud compute health-checks list*), temos todas as informações sobre os objetos da GCP responsáveis pelo Healthcheck. Para conseguir o mesmo utilizando apenas a ferramenta *gcloud* precisaríamos executar quatro consultas à API da GCP para cada ingress, a fim de obter os detalhes dos objetos *forwarding-rules*, *target-http-proxies*, *url-maps* e *backend-services* deles, tornando a operação bem mais lenta.
-

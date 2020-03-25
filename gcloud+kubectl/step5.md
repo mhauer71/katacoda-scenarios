@@ -1,0 +1,1 @@
+O ambiente do Katacoda é destruido após um tempo de inatividade, mas para aumentar a segurança acabamos de apagar os diretórios que continham as suas credenciais da gcloud e do kubernetes. Caso queira efetuar mais operações com elas, refaça os procedimentos dos passos 1 e 2.

@@ -15,7 +15,17 @@
             },
             {
                 "title": "Passo 3 - Verificando os ingress do cluster e sua ligação com os objetos da Google Cloud",
-                "text": "step3.md"}
+                "text": "step3.md"
+            },
+            {
+                "title": "Extras - Comandos, flags e truques utilizados nesse exercício",
+                "text": "step4.md"
+            },
+            {
+                "title": "Final - Apagando credenciais",
+                "text": "step5.md",
+                "courseData": "step5-background.sh"
+            }
         ],
         "intro": {
             "text": "intro.md",
