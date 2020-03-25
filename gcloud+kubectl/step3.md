@@ -26,18 +26,18 @@ Na GKE esses annotations correspondem a toda a cadeia de objetos da GCP respons�
 O benefício dessa integração das annotations do ingress com os objetos da GCP é que com apenas um comando `kubectl get ingress  -o json`{{execute}} podemos obter quase todos os atributos da cadeia do Healthcheck do baleanceador de carga do ingress, restando apenas o caminho do Healthcheck que pode ser obtido com apenas um comando gcloud conforme demonstrado no script abaixo:
 
 `
-json=`kubectl get ingress  -o json`
-ingress_count=`echo $json | jq '.items|length'`
+json=$(kubectl get ingress  -o json)
+ingress_count=$(echo $json | jq '.items|length')
 for ((i=0;i<$ingress_count;i++)); do
     unset rule_array
-    name=`echo $json | jq -r '.items['$i'].metadata.name'`
+    name=$(echo $json | jq -r '.items['$i'].metadata.name')
     ### TODO: Otimizar uso do jq, capturando as variáveis apenas com uma execução do comando
-    ip=`echo $json | jq -r '.items['$i'].status.loadBalancer.ingress[].ip'`
-    backend=`echo $json | jq -r '.items['$i'].metadata.annotations["ingress.kubernetes.io/backends"]' | cut -f2 -d\"`
-    host_and_path=`gcloud compute health-checks list --format="csv[no-heading](httpHealthCheck.host,httpHealthCheck.requestPath)" --filter="name=('$backend')"`
+    ip=$(echo $json | jq -r '.items['$i'].status.loadBalancer.ingress[].ip')
+    backend=$(echo $json | jq -r '.items['$i'].metadata.annotations["ingress.kubernetes.io/backends"]' | cut -f2 -d\")
+    host_and_path=$(gcloud compute health-checks list --format="csv[no-heading](httpHealthCheck.host,httpHealthCheck.requestPath)" --filter="name=('$backend')")
     ### TODO: Trocar uso do "cut" para "read", para capturar as variáveis com apenas com um comando
-    lb_host=`echo $host_and_path | cut -d, -f1`
-    healthcheck_path=`echo $host_and_path | cut -d, -f2`    
+    lb_host=$(echo $host_and_path | cut -d, -f1)
+    healthcheck_path=$(echo $host_and_path | cut -d, -f2)    
     ### Caso o host esteja discriminado dentro do healthcheck, usamos o seu valor para todas os "Host:" headers. Caso contrário, usamos o valor das Forward Rules
     echo "----"
     echo "Ingress: "$name
@@ -47,9 +47,9 @@ for ((i=0;i<$ingress_count;i++)); do
         rule_array[0]=$lb_host
         echo "- "$lb_host
     else
-        rule_count=`echo $json | jq '.items['$i'].spec.rules | length'`
+        rule_count=$(echo $json | jq '.items['$i'].spec.rules | length')
         for ((j=0;j<$rule_count;j++)); do
-            rule_array[$j]=`echo $json | jq -r '.items['$i'].spec.rules['$j']?.host'`
+            rule_array[$j]=$(echo $json | jq -r '.items['$i'].spec.rules['$j']?.host')
             if [[ ${rule_array[$j]} =~ "*" ]]; then
                 rule_array[$j]="www."${rule_array[$j]#"*."}
             fi
