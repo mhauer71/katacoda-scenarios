@@ -2,6 +2,8 @@
     "noindex": true,
     "title": "Linha de comando com gcloud, kubectl e shell",
     "description": "Mostrar conceitos básicos de Kubernetes e testar o conhecimento adquirido em um abiente real",
+    "difficulty": "intermediate",
+    "time": "10-15 minutes",
     "details": {
         "steps": [
             {
