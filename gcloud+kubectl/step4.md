@@ -36,7 +36,8 @@ Para mais informações sobre o suporte ao JSONPath pelo kubectl, veja os links 
 ## Usando o jq
 O jq é um processador de JSON bastante útil para a interpretação e manipulação de arquivos e respostas de servidores que utilizam esse formato. Alguns exemplos do uso do jq em conjunto com o gcloud e o kubectl:
 
-* Campos *nome*  *endpoint* e *versão de cada nodepool*, similar ao filtro direto do gcloud `gcloud container clusters list --format=json | jq -r '.[].name,.[].endpoint,.[].nodePools[].version' | jq`{{execute}}
+* Campos *nome*  *endpoint* e *versão de cada nodepool*, similar ao filtro direto do gcloud `gcloud container clusters list --format=json | jq -r '.[].name,.[].endpoint,.[].nodePools[].version'`{{execute}}
+
 * Contagem do número de ingress do cluster `kubectl get ingress  -o json | jq '.items|length'`{{execute}}
 
 Para mais exemplos de uso do jq, visite [o tutorial](https://stedolan.github.io/jq/tutorial/).
