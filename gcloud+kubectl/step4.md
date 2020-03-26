@@ -7,7 +7,7 @@ Além do formato tradicional da saída do comando *gcloud*, voltado para consult
 * Saída em json: `gcloud container clusters list --format=json`{{execute}} 
 * Saída em yaml: `gcloud container clusters list --format=yaml`{{execute}}
 * Saída separada por vírgulas, com os campos *nome*  *endpoint* e *versão de cada nodepool*, sem o cabeçalho: `gcloud container clusters list --format="csv[no-heading](name,endpoint,nodePools[].version)"`{{execute}}
-* Os mesmos campos da saída anterior, em forma de tabela e com cabeçalho e bordas: `gcloud container clusters list --format="table[box](name,endpoint,nodePools[].version)"`
+* Os mesmos campos da saída anterior, em forma de tabela e com cabeçalho e bordas: `gcloud container clusters list --format="table[box](name,endpoint,nodePools[].version)"`{{execute}}
 
 Isso nos propicia a montar scripts para tratar a saída dos comandos da gcloud, como no exemplo abaixo que lista todos as chaves dos service accounts existentes nos projetos associados à sua credencial gcloud (script retirado [deste blog da Google Cloud](https://cloud.google.com/blog/products/gcp/filtering-and-formatting-fun-with))
 `#!/bin/bash
