@@ -7,4 +7,4 @@ Agora vamos verificar qual a imagem que foi instalada no nosso webserver: digite
 ```kubectl describe pod <NOME-DO-POD>```
 substituindo `<NOME-DO-POD>` pelo resultado obtido no comando anterior. Depois disso procure na saída do comando pelo campo "Image:" para obter o nome da imagem usada pelo pod webserver.
 >>Qual é a imagem utilizada pelo nosso webserver?<<
-=== ngnix
+=== nginx
